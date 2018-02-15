@@ -1,0 +1,14 @@
+@media all and (max-width: 1200px) {}
+
+@media all and (max-width: 992px) {}
+
+@media all and (max-width: 767px) {}
+
+@media all and (max-width: 480px) {
+    #kontener > .inner {
+        background-color: blue;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+

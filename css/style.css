@@ -42,7 +42,21 @@
 
 #floated > .clear{
     clear: both;
-   
-    
 }
 
+#tlo
+{
+    height: 500px;
+    background: url("https://royalcanin.pl/blog/wp-content/uploads/2016/12/176W-950x633.jpeg") no-repeat;
+/*    kiedy dla background position nie ustawimy drugiej wartosci, jest ona ustawiona na "center". Pierwsza wartość, odnosi się zzawsze do osi ox*/
+    background-position: center;
+    background-size: cover;
+}
+
+#przepelnienie{
+    width: 100px;
+    height: 100px;
+    border: 2px dashed black;
+    overflow: auto;
+    
+}
