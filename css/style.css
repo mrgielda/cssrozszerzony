@@ -1,16 +1,16 @@
-#ukryty{
+#ukryty {
     display: none;
 }
 
-#kontener > .inner{
+#kontener > .inner {
     display: inline-block;
     height: 300px;
     width: 33%;
     background-color: red;
-/*    float: left;*/
+    /*    float: left;*/
 }
 
-#floated > .inner{
+#floated > .inner {
     width: 300px;
     height: 300px;
     background-color: red;
@@ -20,7 +20,7 @@
     transition-timing-function: ease;
 }
 
-#floated > .inner:hover{
+#floated > .inner:hover {
     width: 600px;
     background-color: green;
 }
@@ -40,23 +40,87 @@
 
 /*Jezeli chcemy obsługę animacji w dwie strony musimy ustawić właściwości na elemencie poprzedajązym hover*/
 
-#floated > .clear{
+#floated > .clear {
     clear: both;
 }
 
-#tlo
-{
+#tlo {
     height: 500px;
     background: url("https://royalcanin.pl/blog/wp-content/uploads/2016/12/176W-950x633.jpeg") no-repeat;
-/*    kiedy dla background position nie ustawimy drugiej wartosci, jest ona ustawiona na "center". Pierwsza wartość, odnosi się zzawsze do osi ox*/
+    /*    kiedy dla background position nie ustawimy drugiej wartosci, jest ona ustawiona na "center". Pierwsza wartość, odnosi się zzawsze do osi ox*/
     background-position: center;
     background-size: cover;
 }
 
-#przepelnienie{
+#przepelnienie {
     width: 100px;
     height: 100px;
     border: 2px dashed black;
     overflow: auto;
+}
+
+#rotacja,
+#przesuniecie,
+#skalowanie,
+#animowany{
+    background: url("https://www.koty.pl/wp-content/uploads/2017/11/shutterstock_684452296-e1511112417106-864x575.jpg") no-repeat; 
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 10px;
+    transition: all 1s;
+    margin-top: 40px;
+    
+  
+}
+
+#rotacja:hover{
+    transform: rotate(360deg);
+}
+
+#transformacje{
+    overflow: hidden; 
+}
+
+#przesuniecie:hover{
+    transform: translate(50%, 50%);
+    
+}
+
+#skalowanie:hover{
+    transform: scale(2);
+}
+
+#animowany{
+    animation-name: rotuj;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/*animacje*/
+@keyframes rotuj {
+/*
+    from {
+        transform: rotate(0deg);
+    }
+    
+    to {
+        transform: rotate(360deg);
+    }
+}
+*/
+    0%{
+        transform: rotate(0deg) scale(1);
+        
+    }
+    50%{
+        transform: rotate(180deg) scale(1.5);
+
+    }
+    100%{
+        transform: rotate(0deg) scale(1);
+    }
     
 }
